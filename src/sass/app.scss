@@ -1,0 +1,84 @@
+@import "bootstrap";
+.fixed-header {
+    z-index: 9999;
+}
+
+.hello-title {
+    line-height: 1;
+}
+
+.scotch-articles {
+    margin-top: 150px;
+}
+
+code.tag-code {
+    border: 1px solid transparentize($pink, 0.5);
+    background: transparentize($pink, 0.9);
+    border-radius: 2px;
+}
+
+.loader-container {
+    width: 100%;
+    height: 100%;
+    z-index: 9000;
+}
+
+.loader-bubble-1,
+.loader-bubble-2 {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    animation: colorama 20s linear infinite;
+    &:after {
+        content: '';
+        width: 200%;
+        height: 200%;
+        left: -50%;
+        top: -50%;
+        background: $blue;
+        opacity: 0.1;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        animation: zoom 4s ease-out infinite;
+        transform-origin: center center;
+        z-index: 1;
+    }
+}
+
+.loader-bubble-1 {
+    &:after {
+        animation-delay: -1s;
+    }
+}
+
+.loader-bubble-2 {
+    &:after {
+        animation-delay: 1s;
+        opacity: 0.1;
+    }
+}
+
+@keyframes zoom {
+    0%,
+    100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0);
+    }
+}
+
+@keyframes colorama {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
