@@ -1,17 +1,36 @@
 {
-    "name": "scotch-scraping-node",
+    "name": "scotch-scraping-node-app",
     "version": "1.0.0",
     "description": "Simple app for scraping author profiles from Scotch.io - https://scotch.io.",
     "author": "Glad Chinda <gladxeqs@gmail.com>",
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js",
+        "dev": "npm-run-all -p start dev:build",
+        "dev:build": "webpack --config ./webpack.config.js -w"
     },
     "dependencies": {
         "axios": "^0.18.0",
+        "bootstrap": "^4.0.0",
         "cheerio": "^1.0.0-rc.2",
         "express": "^4.16.3",
+        "jquery-slim": "^3.0.0",
         "lodash": "^4.17.5",
         "morgan": "^1.9.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^8.2.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.6.1",
+        "css-loader": "^0.28.11",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "node-sass": "^4.8.3",
+        "npm-run-all": "^4.1.2",
+        "postcss-loader": "^2.1.3",
+        "sass-loader": "^6.0.7",
+        "style-loader": "^0.20.3",
+        "webpack": "^4.5.0",
+        "webpack-cli": "^2.0.13"
     },
     "license": "MIT",
     "engines": {
@@ -20,6 +39,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/gladchinda/scotch-scraping-node.git"
+        "url": "https://github.com/gladchinda/scotch-scraping-node-app.git"
     }
 }
