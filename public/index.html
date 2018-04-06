@@ -9,16 +9,46 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Scotch Scraping</title>
+    <title>Hello Scotch</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/app.css">
 </head>
 
 <body>
     <!--[if lt IE 7]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
-    <h1>Welcome to Scotch Scraping</h1>
+    <div id="--global-loader" class="loader-container bg-white position-fixed flex-row justify-content-center align-items-center"></div>
+    <div class="d-flex flex-column justify-content-start">
+        <header class="bg-white position-fixed w-100 border-gray border-bottom fixed-header">
+            <div class="container">
+                <div class="row d-flex flex-row justify-content-between align-items-center py-4">
+                    <div class="col-md-auto">
+                        <h1 id="--hello-title" class="h2 text-secondary font-weight-bold text-center hello-title my-0">Hello Scotch</h1>
+                    </div>
+                    <div class="col-md-4 pt-xs-3 pt-md-0">
+                        <div class="search-section__form">
+                            <div class="form-group row my-0">
+                                <div class="col-sm-8">
+                                    <input type="text" id="--scotch-author" class="form-control form-control-md w-100" placeholder="Enter author scotchname" autocomplete="false" autofocus>
+                                </div>
+                                <div class="col-sm-4">
+                                    <button type="button" id="--search-scotch-button" class="btn btn-md btn-primary">Get Posts</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="container scotch-articles">
+            <div class="row d-flex flex-row flex-wrap justify-content-center align-content-start" id="--scotch-articles"></div>
+        </section>
+    </div>
+
+    <script src="/assets/js/bundle.js"></script>
 </body>
 
 </html>
